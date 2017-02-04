@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Github, blog" />
+  <meta name="keywords" content="移动端," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="加载优化1234567891011121314151. 合并CSS,JavaScript2. 合并小图片,使用雪碧图3. 缓存一切可缓存的资源4. 使用Cache5. 使用外联式引用CSS,JavaScript6. 压缩HTML,CSS,JavaScript7. 启用GZip8. 使用首屏加载9. 使用按需加载10. 使用滚屏加载11. 通过Media Query加载12. 增加Loading进度">
+<meta name="description" content="加载优化123456789101112131415合并CSS,JavaScript合并小图片,使用雪碧图缓存一切可缓存的资源使用Cache使用外联式引用CSS,JavaScript压缩HTML,CSS,JavaScript启用GZip使用首屏加载使用按需加载使用滚屏加载通过Media Query加载增加Loading进度条减少Cookies避免重定向异步加载第三方资源
+CSS优化123456789">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端H5性能优化">
 <meta property="og:url" content="https://tongmingwu.github.io/2017/02/04/移动端H5性能优化/index.html">
 <meta property="og:site_name" content="莫到家了">
-<meta property="og:description" content="加载优化1234567891011121314151. 合并CSS,JavaScript2. 合并小图片,使用雪碧图3. 缓存一切可缓存的资源4. 使用Cache5. 使用外联式引用CSS,JavaScript6. 压缩HTML,CSS,JavaScript7. 启用GZip8. 使用首屏加载9. 使用按需加载10. 使用滚屏加载11. 通过Media Query加载12. 增加Loading进度">
-<meta property="og:updated_time" content="2017-02-04T10:39:36.951Z">
+<meta property="og:description" content="加载优化123456789101112131415合并CSS,JavaScript合并小图片,使用雪碧图缓存一切可缓存的资源使用Cache使用外联式引用CSS,JavaScript压缩HTML,CSS,JavaScript启用GZip使用首屏加载使用按需加载使用滚屏加载通过Media Query加载增加Loading进度条减少Cookies避免重定向异步加载第三方资源
+CSS优化123456789">
+<meta property="og:updated_time" content="2017-02-04T15:16:27.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端H5性能优化">
-<meta name="twitter:description" content="加载优化1234567891011121314151. 合并CSS,JavaScript2. 合并小图片,使用雪碧图3. 缓存一切可缓存的资源4. 使用Cache5. 使用外联式引用CSS,JavaScript6. 压缩HTML,CSS,JavaScript7. 启用GZip8. 使用首屏加载9. 使用按需加载10. 使用滚屏加载11. 通过Media Query加载12. 增加Loading进度">
+<meta name="twitter:description" content="加载优化123456789101112131415合并CSS,JavaScript合并小图片,使用雪碧图缓存一切可缓存的资源使用Cache使用外联式引用CSS,JavaScript压缩HTML,CSS,JavaScript启用GZip使用首屏加载使用按需加载使用滚屏加载通过Media Query加载增加Loading进度条减少Cookies避免重定向异步加载第三方资源
+CSS优化123456789">
 
 
 
@@ -325,18 +328,11 @@
       
 
       
-        <h3 id="加载优化"><a href="#加载优化" class="headerlink" title="加载优化"></a>加载优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">1. 合并CSS,JavaScript</div><div class="line">2. 合并小图片,使用雪碧图</div><div class="line">3. 缓存一切可缓存的资源</div><div class="line">4. 使用Cache</div><div class="line">5. 使用外联式引用CSS,JavaScript</div><div class="line">6. 压缩HTML,CSS,JavaScript</div><div class="line">7. 启用GZip</div><div class="line">8. 使用首屏加载</div><div class="line">9. 使用按需加载</div><div class="line">10. 使用滚屏加载</div><div class="line">11. 通过Media Query加载</div><div class="line">12. 增加Loading进度条</div><div class="line">13. 减少Cookies</div><div class="line">14. 避免重定向</div><div class="line">15. 异步加载第三方资源</div></pre></td></tr></table></figure>
-<h3 id="CSS优化"><a href="#CSS优化" class="headerlink" title="CSS优化"></a>CSS优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">1. CSS卸载头部,JavaScript写在尾部或使用异步</div><div class="line">2. 避免图片和iFrame等的空src</div><div class="line">3. 尽量避免重设图片大小</div><div class="line">4. 图片尽量避免使用DataURL</div><div class="line">5. 尽量避免在HTML标签中使用style属性</div><div class="line">6. 避免CSS表达式</div><div class="line">7. 移除空的CSS规则</div><div class="line">8. 正确使用Display属性</div><div class="line">9. 不滥用float</div><div class="line">10. 不滥用Web字体</div><div class="line">11. 不声明过多的font-size</div><div class="line">12. 值为0时不需要任何单位</div><div class="line">13. 标准化各种浏览器前缀</div><div class="line">14. 避免让选择符看起来像正则</div></pre></td></tr></table></figure>
-<h3 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1. 使用图片压缩</div><div class="line">2. 使用(CSS3,SVG,IconFont)代替图片</div><div class="line">3. 使用Srcset</div><div class="line">4. webP由于JPG</div><div class="line">5. PNG8由于GIF</div><div class="line">6. 首次加载不大于1M</div><div class="line">7. 图片宽不大于640</div></pre></td></tr></table></figure>
-<h3 id="脚本优化"><a href="#脚本优化" class="headerlink" title="脚本优化"></a>脚本优化</h3><ol>
-<li>减少重绘和回流</li>
-<li>缓存DOM选择和计算</li>
-<li>缓存列表的length</li>
-<li>尽量使用事件代理,避免批量绑定事件</li>
-<li>尽量使用ID选择器</li>
-<li>使用touchStart touchEnd代替click</li>
-</ol>
-<h3 id="渲染优化"><a href="#渲染优化" class="headerlink" title="渲染优化"></a>渲染优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1. HTML使用Viewport</div><div class="line">2. 减少Dom节点</div><div class="line">3. 合理使用requestAnimationFrame动画代替setTimeout</div><div class="line">4. 尽量使用CSS3动画</div><div class="line">5. 使用适当的Canvas动画</div><div class="line">6. Touchmove,Scroll事件会导致多次喧嚷</div><div class="line">7.使用(CSS3 transitions, Canvas, WebGL, Video)来触发GPU渲染</div></pre></td></tr></table></figure>
+        <h3 id="加载优化"><a href="#加载优化" class="headerlink" title="加载优化"></a>加载优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">合并CSS,JavaScript</div><div class="line">合并小图片,使用雪碧图</div><div class="line">缓存一切可缓存的资源</div><div class="line">使用Cache</div><div class="line">使用外联式引用CSS,JavaScript</div><div class="line">压缩HTML,CSS,JavaScript</div><div class="line">启用GZip</div><div class="line">使用首屏加载</div><div class="line">使用按需加载</div><div class="line">使用滚屏加载</div><div class="line">通过Media Query加载</div><div class="line">增加Loading进度条</div><div class="line">减少Cookies</div><div class="line">避免重定向</div><div class="line">异步加载第三方资源</div></pre></td></tr></table></figure>
+<h3 id="CSS优化"><a href="#CSS优化" class="headerlink" title="CSS优化"></a>CSS优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">CSS卸载头部,JavaScript写在尾部或使用异步</div><div class="line">避免图片和iFrame等的空src</div><div class="line">尽量避免重设图片大小</div><div class="line">图片尽量避免使用DataURL</div><div class="line">尽量避免在HTML标签中使用style属性</div><div class="line">避免CSS表达式</div><div class="line">移除空的CSS规则</div><div class="line">正确使用Display属性</div><div class="line">不滥用float</div><div class="line">不滥用Web字体</div><div class="line">不声明过多的font-size</div><div class="line">值为0时不需要任何单位</div><div class="line">标准化各种浏览器前缀</div><div class="line">避免让选择符看起来像正则</div></pre></td></tr></table></figure>
+<h3 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">使用图片压缩</div><div class="line">使用(CSS3,SVG,IconFont)代替图片</div><div class="line">使用Srcset</div><div class="line">webP由于JPG</div><div class="line">PNG8由于GIF</div><div class="line">首次加载不大于1M</div><div class="line">图片宽不大于640</div></pre></td></tr></table></figure>
+<h3 id="脚本优化"><a href="#脚本优化" class="headerlink" title="脚本优化"></a>脚本优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">减少重绘和回流</div><div class="line">缓存DOM选择和计算</div><div class="line">缓存列表的length</div><div class="line">尽量使用事件代理,避免批量绑定事件</div><div class="line">尽量使用ID选择器</div><div class="line">使用touchStart touchEnd代替click</div></pre></td></tr></table></figure>
+<h3 id="渲染优化"><a href="#渲染优化" class="headerlink" title="渲染优化"></a>渲染优化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">HTML使用Viewport</div><div class="line">减少Dom节点</div><div class="line">合理使用requestAnimationFrame动画代替setTimeout</div><div class="line">尽量使用CSS3动画</div><div class="line">使用适当的Canvas动画</div><div class="line">Touchmove,Scroll事件会导致多次喧嚷</div><div class="line">使用(CSS3 transitions, Canvas, WebGL, Video)来触发GPU渲染</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -357,6 +353,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/移动端/" rel="tag"># 移动端</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -371,6 +373,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/04/前端面试/" rel="prev" title="前端面试">
+                前端面试 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -440,7 +446,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -448,6 +454,13 @@
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
