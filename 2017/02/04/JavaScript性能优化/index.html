@@ -84,13 +84,16 @@
 
 
 
+<meta name="description" content="在JavaScript中，像scroll，resize这一类的事件会非常频繁的触发，如果把太多的代码放进这一类的回调函数中，会延迟页面的滚动，甚至造成无法响应。所以应该把这一类代码分离出来，放在一个timer中，有间隔的去检查是否滚动，再做适当的处理。代码如下:12345678910111213var didScroll = false;$(window).scroll(function() &amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hello">
-<meta property="og:url" content="https://tongmingwu.github.io/2017/02/03/hello/index.html">
+<meta property="og:title" content="JavaScript性能优化">
+<meta property="og:url" content="https://tongmingwu.github.io/2017/02/04/JavaScript性能优化/index.html">
 <meta property="og:site_name" content="莫到家了">
-<meta property="og:updated_time" content="2017-02-03T04:38:25.762Z">
+<meta property="og:description" content="在JavaScript中，像scroll，resize这一类的事件会非常频繁的触发，如果把太多的代码放进这一类的回调函数中，会延迟页面的滚动，甚至造成无法响应。所以应该把这一类代码分离出来，放在一个timer中，有间隔的去检查是否滚动，再做适当的处理。代码如下:12345678910111213var didScroll = false;$(window).scroll(function() &amp;#">
+<meta property="og:updated_time" content="2017-02-04T10:11:53.368Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hello">
+<meta name="twitter:title" content="JavaScript性能优化">
+<meta name="twitter:description" content="在JavaScript中，像scroll，resize这一类的事件会非常频繁的触发，如果把太多的代码放进这一类的回调函数中，会延迟页面的滚动，甚至造成无法响应。所以应该把这一类代码分离出来，放在一个timer中，有间隔的去检查是否滚动，再做适当的处理。代码如下:12345678910111213var didScroll = false;$(window).scroll(function() &amp;#">
 
 
 
@@ -118,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://tongmingwu.github.io/2017/02/03/hello/"/>
+  <link rel="canonical" href="https://tongmingwu.github.io/2017/02/04/JavaScript性能优化/"/>
 
 
 
 
 
-  <title> hello | 莫到家了 </title>
+  <title> JavaScript性能优化 | 莫到家了 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://tongmingwu.github.io/2017/02/03/hello/">
+  <link itemprop="mainEntityOfPage" href="https://tongmingwu.github.io/2017/02/04/JavaScript性能优化/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="莫到家了">
@@ -271,7 +274,7 @@
             
             
               
-                hello
+                JavaScript性能优化
               
             
           </h1>
@@ -286,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T12:37:28+08:00">
-                2017-02-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-04T18:07:27+08:00">
+                2017-02-04
               </time>
             
 
@@ -322,7 +325,9 @@
       
 
       
-        
+        <p>在JavaScript中，像scroll，resize这一类的事件会非常频繁的触发，<br>如果把太多的代码放进这一类的回调函数中，会延迟页面的滚动，<br>甚至造成无法响应。所以应该把这一类代码分离出来，放在一个timer中，<br>有间隔的去检查是否滚动，再做适当的处理。代码如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var didScroll = false;</div><div class="line"></div><div class="line">$(window).scroll(function() &#123;</div><div class="line">    didScroll = true;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">setInterval(function() &#123;</div><div class="line">    if ( didScroll ) &#123;</div><div class="line">        didScroll = false;</div><div class="line">        // Check your page position and then</div><div class="line">        // Load in more results</div><div class="line">    &#125;</div><div class="line">&#125;, 250)</div></pre></td></tr></table></figure></p>
+<p>这样的作法类似于Nicholas将需要长时间运算的循环分解为“片”来进行运算：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 具体可以参考他写的《javascript高级程序设计》</div><div class="line">// 也可以参考他的这篇博客： http://www.nczonline.net/blog/2009/01/13/speed-up-your-javascript-part-1/</div><div class="line">function chunk(array, process, context)&#123;</div><div class="line">    var items = array.concat();   //clone the array</div><div class="line">    setTimeout(function()&#123;</div><div class="line">        var item = items.shift();</div><div class="line">        process.call(context, item);</div><div class="line"></div><div class="line">        if (items.length &gt; 0)&#123;</div><div class="line">            setTimeout(arguments.callee, 100);</div><div class="line">        &#125;</div><div class="line">    &#125;, 100);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -357,6 +362,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/04/移动端H5性能优化/" rel="prev" title="移动端H5性能优化">
+                移动端H5性能优化 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -417,7 +426,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
